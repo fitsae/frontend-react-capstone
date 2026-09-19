@@ -1,0 +1,93 @@
+:root {
+  --red: #d32f2f;
+  --red-dark: #b71c1c;
+  --bg: #fff8f8;
+  --text: #222;
+  --muted: #666;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: #fff;
+  border-bottom: 2px solid var(--red);
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+.logo {
+  width: 32px;
+  height: 32px;
+}
+.brand-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: 0.5px;
+}
+.site-nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+.site-nav a:hover {
+  color: var(--red);
+}
+.site-nav a.active {
+  color: #fff;
+  background: var(--red);
+}
+.site-main {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  border-top: 1px solid #eee;
+  background: #fff;
+}
+h1 {
+  color: var(--red-dark);
+}
+@media (max-width: 600px) {
+  .brand-name {
+    font-size: 1.15rem;
+  }
+  .site-nav {
+    font-size: 0.9rem;
+    gap: 0.5rem;
+  }
+}
